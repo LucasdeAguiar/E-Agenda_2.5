@@ -44,15 +44,19 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GestaoContatos.WinApp", "Ge
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ModuloCompromisso", "ModuloCompromisso", "{52C12897-A26A-42D6-86E7-B667A9094413}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GestaoCompromissos.Dominio", "GestaoCompromissos.Dominio\GestaoCompromissos.Dominio.csproj", "{56A68DF3-2A10-4DC3-AB88-761F62094595}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GestaoCompromissos.Dominio", "GestaoCompromissos.Dominio\GestaoCompromissos.Dominio.csproj", "{56A68DF3-2A10-4DC3-AB88-761F62094595}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ModuloCompromisso", "ModuloCompromisso", "{41D3FA03-6902-4D5D-9CDB-A8BE94CB930A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GestaoCompromissos.Infra.Arquivos", "GestaoCompromissos.Infra.Arquivos\GestaoCompromissos.Infra.Arquivos.csproj", "{CCC90F08-84E3-4024-B556-53A89AD36FC9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GestaoCompromissos.Infra.Arquivos", "GestaoCompromissos.Infra.Arquivos\GestaoCompromissos.Infra.Arquivos.csproj", "{CCC90F08-84E3-4024-B556-53A89AD36FC9}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ModuloCompromisso", "ModuloCompromisso", "{D732C283-873E-4A04-AEA3-11089E28E8F1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GestaoCompromissos.WinApp", "GestaoCompromissos.WinApp\GestaoCompromissos.WinApp.csproj", "{3C2A408D-820B-4940-9FD9-566DAE6EB1D1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GestaoCompromissos.WinApp", "GestaoCompromissos.WinApp\GestaoCompromissos.WinApp.csproj", "{3C2A408D-820B-4940-9FD9-566DAE6EB1D1}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ModuloTelaPrincipal", "ModuloTelaPrincipal", "{60220375-A4F2-4B5E-A59D-CFBAAB181164}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TelaPrincipal.WinApp", "TelaPrincipal.WinApp\TelaPrincipal.WinApp.csproj", "{0085551A-F43A-4591-BB00-F2E52D698AA3}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -100,6 +104,10 @@ Global
 		{3C2A408D-820B-4940-9FD9-566DAE6EB1D1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3C2A408D-820B-4940-9FD9-566DAE6EB1D1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3C2A408D-820B-4940-9FD9-566DAE6EB1D1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0085551A-F43A-4591-BB00-F2E52D698AA3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0085551A-F43A-4591-BB00-F2E52D698AA3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0085551A-F43A-4591-BB00-F2E52D698AA3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0085551A-F43A-4591-BB00-F2E52D698AA3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -125,6 +133,8 @@ Global
 		{CCC90F08-84E3-4024-B556-53A89AD36FC9} = {41D3FA03-6902-4D5D-9CDB-A8BE94CB930A}
 		{D732C283-873E-4A04-AEA3-11089E28E8F1} = {0677DC2E-0311-4DA6-88B9-65F0A5C2F9EB}
 		{3C2A408D-820B-4940-9FD9-566DAE6EB1D1} = {D732C283-873E-4A04-AEA3-11089E28E8F1}
+		{60220375-A4F2-4B5E-A59D-CFBAAB181164} = {0677DC2E-0311-4DA6-88B9-65F0A5C2F9EB}
+		{0085551A-F43A-4591-BB00-F2E52D698AA3} = {60220375-A4F2-4B5E-A59D-CFBAAB181164}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {70E43CAF-4BE0-4981-8F72-7FCAFEA5FFBC}

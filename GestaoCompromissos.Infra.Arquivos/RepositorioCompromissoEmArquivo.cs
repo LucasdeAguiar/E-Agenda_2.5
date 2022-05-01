@@ -18,7 +18,7 @@ namespace GestaoCompromissos.Infra.Arquivos
 
             this.serializador = serializador;
 
-            compromissos = serializador.CarregarContatosDoArquivo();
+            compromissos = serializador.CarregarCompromissosDoArquivo();
 
             if (compromissos.Count > 0)
                 contador = compromissos.Max(x => x.Numero);
@@ -51,11 +51,11 @@ namespace GestaoCompromissos.Infra.Arquivos
                     item.HoraInicio = compromisso.HoraInicio;
                     item.HoraTermino = compromisso.HoraTermino;
                     item.DataCompromisso = compromisso.DataCompromisso;
-                    item.Contato.Nome = compromisso.Contato.Nome;
-                    item.Contato.Email = compromisso.Contato.Email;
-                    item.Contato.Telefone = compromisso.Contato.Telefone;
-                    item.Contato.Empresa = compromisso.Contato. Empresa;
-                    item.Contato.Cargo = compromisso.Contato.Cargo;
+               //    item.Contato.Nome = compromisso.Contato.Nome;
+              //      item.Contato.Email = compromisso.Contato.Email;
+              //      item.Contato.Telefone = compromisso.Contato.Telefone;
+                 //   item.Contato.Empresa = compromisso.Contato. Empresa;
+                //    item.Contato.Cargo = compromisso.Contato.Cargo;
 
                     break;
                 }
