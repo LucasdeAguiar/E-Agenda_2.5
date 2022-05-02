@@ -44,6 +44,16 @@ namespace GestaoContatos.WinApp
             contato.Telefone = txtTelefone.Text;
             contato.Empresa = txtEmpresa.Text;
             contato.Cargo = txtCargo.Text;
+
+            if(contato.Telefone.Length != 9)
+            {
+                return;
+            }
+
+            if (!contato.Email.Contains("@") || !contato.Email.Contains("."))
+            {
+                return;
+            }
         }
     }
 }

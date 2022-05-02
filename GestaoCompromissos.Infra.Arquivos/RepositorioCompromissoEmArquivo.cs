@@ -51,11 +51,7 @@ namespace GestaoCompromissos.Infra.Arquivos
                     item.HoraInicio = compromisso.HoraInicio;
                     item.HoraTermino = compromisso.HoraTermino;
                     item.DataCompromisso = compromisso.DataCompromisso;
-               //    item.Contato.Nome = compromisso.Contato.Nome;
-              //      item.Contato.Email = compromisso.Contato.Email;
-              //      item.Contato.Telefone = compromisso.Contato.Telefone;
-                 //   item.Contato.Empresa = compromisso.Contato. Empresa;
-                //    item.Contato.Cargo = compromisso.Contato.Cargo;
+      
 
                     break;
                 }
@@ -70,6 +66,7 @@ namespace GestaoCompromissos.Infra.Arquivos
 
             serializador.GravarCompromissosEmArquivo(compromissos);
         }
+
 
         public List<Compromisso> SelecionarCompromissos()
         {

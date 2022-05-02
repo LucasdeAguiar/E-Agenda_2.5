@@ -22,7 +22,7 @@ namespace GestaoCompromissos.Dominio
         public DateTime DataCompromisso { get => _dataCompromisso.Add(HoraInicio); set => _dataCompromisso = value; }
         public TimeSpan HoraInicio { get; set; }
         public TimeSpan HoraTermino { get; set; }
-        public Contato Contato { get; }
+        public Contato Contato { get; set; }
 
         public Compromisso(int numero, string assunto, string local, DateTime dataCompromisso, TimeSpan horaInicio, TimeSpan horaTermino, Contato contato)
         {
@@ -38,7 +38,7 @@ namespace GestaoCompromissos.Dominio
 
         public override string ToString()
         {
-            return $"Número: {Numero}, Assunto: {Assunto}, Local: {Local}, Hora Início: {HoraInicio}, Hora Término: {HoraTermino}, Data do Compromisso: {DataCompromisso}, Contato: {Contato}";
+            return $"Número: {Numero}, Assunto: {Assunto}, Local: {Local}, Data do Compromisso: {DataCompromisso.AddHours(HoraInicio.Hours)}, \n Contato: {Contato.Nome}";
         }
 
 

@@ -85,6 +85,7 @@
             this.Controls.Add(this.btnTarefa);
             this.Controls.Add(this.label1);
             this.Name = "TelaPrincipal";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "TelaPrincipal";
             this.ResumeLayout(false);
             this.PerformLayout();

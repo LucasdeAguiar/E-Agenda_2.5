@@ -37,7 +37,7 @@ namespace GestaoContatos.Dominio
         {
 
 
-            return $"Número: {Numero}, Nome: {Nome}, Email: {Email}, Telefone: {Telefone}, Empresa: {Empresa}, Cargo: {Cargo}";
+            return $"Número: {Numero}, Nome: {Nome},  Telefone: {Telefone}, Empresa: {Empresa}";
         }
     }
 }

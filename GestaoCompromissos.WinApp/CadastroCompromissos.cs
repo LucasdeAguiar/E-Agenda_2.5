@@ -1,4 +1,7 @@
 ﻿using GestaoCompromissos.Dominio;
+using GestaoContatos.Dominio;
+using GestaoContatos.WinApp;
+using GestaoContatos.Infra.Arquivos;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -14,7 +17,13 @@ namespace GestaoCompromissos.WinApp
 {
     public partial class CadastroCompromissos : Form
     {
+      
+        
+        private ListagemContatos lt = new ListagemContatos();
         private Compromisso compromisso;
+       
+
+
         public CadastroCompromissos()
         {
             InitializeComponent();
@@ -35,8 +44,12 @@ namespace GestaoCompromissos.WinApp
                 txtDataCompromisso.Text = compromisso.DataCompromisso.ToString();
                 txtHoraInicio.Text = compromisso.HoraInicio.ToString();
                 txtHoraTermino.Text = compromisso.HoraTermino.ToString();
-             
+               
+              
             }
+
+
+
         }
 
         private void btnGravar_Click(object sender, EventArgs e)
@@ -47,9 +60,10 @@ namespace GestaoCompromissos.WinApp
             compromisso.DataCompromisso = Convert.ToDateTime(txtDataCompromisso.Text);
             compromisso.HoraInicio = TimeSpan.Parse(txtHoraInicio.Text);
             compromisso.HoraTermino = TimeSpan.Parse(txtHoraTermino.Text);
+            compromisso.Contato = lt.obterContato(txtNomeContato.Text);
 
         }
 
-       
+        
     }
 }

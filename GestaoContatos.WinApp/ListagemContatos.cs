@@ -15,7 +15,7 @@ namespace GestaoContatos.WinApp
 {
     public partial class ListagemContatos : Form
     {
-        private IRepositorioContato repositorioContato;
+        public  IRepositorioContato repositorioContato;
         public ListagemContatos()
         {
 
@@ -36,6 +36,21 @@ namespace GestaoContatos.WinApp
             {
                 listContatos.Items.Add(contato);
             }
+
+        }
+
+        public Contato obterContato(string nomeContato)
+        {
+            List<Contato> contatos = repositorioContato.SelecionarContatos();
+            foreach (Contato contato in contatos)
+            {
+                if (contato.Nome == nomeContato)
+                {
+                    return contato;
+                }
+            }
+
+            return null;
 
         }
 

@@ -36,7 +36,7 @@
             // 
             // btnInserir
             // 
-            this.btnInserir.Location = new System.Drawing.Point(71, 56);
+            this.btnInserir.Location = new System.Drawing.Point(93, 56);
             this.btnInserir.Name = "btnInserir";
             this.btnInserir.Size = new System.Drawing.Size(103, 42);
             this.btnInserir.TabIndex = 0;
@@ -46,7 +46,7 @@
             // 
             // btnEditar
             // 
-            this.btnEditar.Location = new System.Drawing.Point(180, 56);
+            this.btnEditar.Location = new System.Drawing.Point(240, 56);
             this.btnEditar.Name = "btnEditar";
             this.btnEditar.Size = new System.Drawing.Size(103, 42);
             this.btnEditar.TabIndex = 1;
@@ -56,7 +56,7 @@
             // 
             // btnExcluir
             // 
-            this.btnExcluir.Location = new System.Drawing.Point(303, 56);
+            this.btnExcluir.Location = new System.Drawing.Point(377, 56);
             this.btnExcluir.Name = "btnExcluir";
             this.btnExcluir.Size = new System.Drawing.Size(103, 42);
             this.btnExcluir.TabIndex = 2;
@@ -68,16 +68,16 @@
             // 
             this.listCompromissos.FormattingEnabled = true;
             this.listCompromissos.ItemHeight = 15;
-            this.listCompromissos.Location = new System.Drawing.Point(71, 130);
+            this.listCompromissos.Location = new System.Drawing.Point(12, 130);
             this.listCompromissos.Name = "listCompromissos";
-            this.listCompromissos.Size = new System.Drawing.Size(335, 139);
+            this.listCompromissos.Size = new System.Drawing.Size(579, 199);
             this.listCompromissos.TabIndex = 3;
             // 
             // ListagemCompromissos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(482, 318);
+            this.ClientSize = new System.Drawing.Size(617, 378);
             this.Controls.Add(this.listCompromissos);
             this.Controls.Add(this.btnExcluir);
             this.Controls.Add(this.btnEditar);

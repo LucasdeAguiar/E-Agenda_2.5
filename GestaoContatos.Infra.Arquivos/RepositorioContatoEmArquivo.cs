@@ -10,7 +10,7 @@ namespace GestaoContatos.Infra.Arquivos
     public class RepositorioContatoEmArquivo : IRepositorioContato
     {
         private readonly ISerializadorContatos serializador;
-        List<Contato> contatos;
+        public  List<Contato> contatos;
         private int contador = 0;
 
         public RepositorioContatoEmArquivo(ISerializadorContatos serializador)
@@ -63,6 +63,20 @@ namespace GestaoContatos.Infra.Arquivos
             contatos.Remove(tarefa);
 
             serializador.GravarContatosEmArquivo(contatos);
+        }
+
+
+        public Contato ObterContato(string nome)
+        {
+            foreach(var item in contatos)
+            {
+                if(item.Nome == nome)
+                    return item;
+                else
+                    return null;
+            }
+
+            return null;
         }
 
         public List<Contato> SelecionarContatos()

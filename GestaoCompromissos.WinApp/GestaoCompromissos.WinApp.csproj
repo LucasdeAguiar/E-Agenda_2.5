@@ -10,6 +10,7 @@
   <ItemGroup>
     <ProjectReference Include="..\GestaoCompromissos.Dominio\GestaoCompromissos.Dominio.csproj" />
     <ProjectReference Include="..\GestaoCompromissos.Infra.Arquivos\GestaoCompromissos.Infra.Arquivos.csproj" />
+    <ProjectReference Include="..\GestaoContatos.WinApp\GestaoContatos.WinApp.csproj" />
   </ItemGroup>
 
 </Project>
