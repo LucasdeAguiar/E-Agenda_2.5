@@ -73,5 +73,44 @@ namespace GestaoCompromissos.Infra.Arquivos
             return compromissos;
         }
 
+
+        public List<Compromisso> SelecionarCompromissosDaSemana()
+        {
+            List<Compromisso> compromissosSemana = new List<Compromisso>();
+
+            DateTime dataCompara = DateTime.Now;
+            dataCompara.AddDays(7);
+
+            foreach (var item in compromissos)
+            {
+                
+
+                if (item.DataCompromisso<dataCompara && item.DataCompromisso > DateTime.Now)
+                {
+                    compromissosSemana.Add(item);
+                }
+            }
+            return compromissosSemana;
+        }
+
+        public List<Compromisso> SelecionarCompromissosFuturos()
+        {
+            List<Compromisso> compromissosFuturos = new List<Compromisso>();
+
+            DateTime dataCompara = DateTime.Now;
+            dataCompara.AddDays(7);
+
+            foreach (var item in compromissos)
+            {
+               
+
+
+                if (item.DataCompromisso > dataCompara )
+                {
+                    compromissosFuturos.Add(item);
+                }
+            }
+            return compromissosFuturos;
+        }
     }
 }

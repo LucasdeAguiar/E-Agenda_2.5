@@ -31,7 +31,14 @@
             this.btnInserir = new System.Windows.Forms.Button();
             this.btnEditar = new System.Windows.Forms.Button();
             this.btnExcluir = new System.Windows.Forms.Button();
-            this.listCompromissos = new System.Windows.Forms.ListBox();
+            this.listCompromissosDaSemana = new System.Windows.Forms.ListBox();
+            this.tabControl1 = new System.Windows.Forms.TabControl();
+            this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.listCompromissosFuturos = new System.Windows.Forms.ListBox();
+            this.tabControl1.SuspendLayout();
+            this.tabPage1.SuspendLayout();
+            this.tabPage2.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnInserir
@@ -67,17 +74,61 @@
             this.btnExcluir.UseVisualStyleBackColor = false;
             this.btnExcluir.Click += new System.EventHandler(this.btnExcluir_Click);
             // 
-            // listCompromissos
+            // listCompromissosDaSemana
             // 
-            this.listCompromissos.BackColor = System.Drawing.SystemColors.WindowFrame;
-            this.listCompromissos.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point);
-            this.listCompromissos.ForeColor = System.Drawing.SystemColors.InactiveBorder;
-            this.listCompromissos.FormattingEnabled = true;
-            this.listCompromissos.ItemHeight = 15;
-            this.listCompromissos.Location = new System.Drawing.Point(44, 134);
-            this.listCompromissos.Name = "listCompromissos";
-            this.listCompromissos.Size = new System.Drawing.Size(547, 259);
-            this.listCompromissos.TabIndex = 3;
+            this.listCompromissosDaSemana.BackColor = System.Drawing.SystemColors.WindowFrame;
+            this.listCompromissosDaSemana.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point);
+            this.listCompromissosDaSemana.ForeColor = System.Drawing.SystemColors.InactiveBorder;
+            this.listCompromissosDaSemana.FormattingEnabled = true;
+            this.listCompromissosDaSemana.ItemHeight = 15;
+            this.listCompromissosDaSemana.Location = new System.Drawing.Point(20, 26);
+            this.listCompromissosDaSemana.Name = "listCompromissosDaSemana";
+            this.listCompromissosDaSemana.Size = new System.Drawing.Size(465, 199);
+            this.listCompromissosDaSemana.TabIndex = 3;
+            // 
+            // tabControl1
+            // 
+            this.tabControl1.Controls.Add(this.tabPage1);
+            this.tabControl1.Controls.Add(this.tabPage2);
+            this.tabControl1.Location = new System.Drawing.Point(69, 104);
+            this.tabControl1.Name = "tabControl1";
+            this.tabControl1.SelectedIndex = 0;
+            this.tabControl1.Size = new System.Drawing.Size(514, 274);
+            this.tabControl1.TabIndex = 4;
+            // 
+            // tabPage1
+            // 
+            this.tabPage1.Controls.Add(this.listCompromissosDaSemana);
+            this.tabPage1.Location = new System.Drawing.Point(4, 24);
+            this.tabPage1.Name = "tabPage1";
+            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage1.Size = new System.Drawing.Size(506, 246);
+            this.tabPage1.TabIndex = 0;
+            this.tabPage1.Text = "Compromissos da Semana";
+            this.tabPage1.UseVisualStyleBackColor = true;
+            // 
+            // tabPage2
+            // 
+            this.tabPage2.Controls.Add(this.listCompromissosFuturos);
+            this.tabPage2.Location = new System.Drawing.Point(4, 24);
+            this.tabPage2.Name = "tabPage2";
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage2.Size = new System.Drawing.Size(506, 246);
+            this.tabPage2.TabIndex = 1;
+            this.tabPage2.Text = "Compromissos Futuros";
+            this.tabPage2.UseVisualStyleBackColor = true;
+            // 
+            // listCompromissosFuturos
+            // 
+            this.listCompromissosFuturos.BackColor = System.Drawing.SystemColors.WindowFrame;
+            this.listCompromissosFuturos.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point);
+            this.listCompromissosFuturos.ForeColor = System.Drawing.SystemColors.InactiveBorder;
+            this.listCompromissosFuturos.FormattingEnabled = true;
+            this.listCompromissosFuturos.ItemHeight = 15;
+            this.listCompromissosFuturos.Location = new System.Drawing.Point(21, 24);
+            this.listCompromissosFuturos.Name = "listCompromissosFuturos";
+            this.listCompromissosFuturos.Size = new System.Drawing.Size(465, 199);
+            this.listCompromissosFuturos.TabIndex = 4;
             // 
             // ListagemCompromissos
             // 
@@ -85,7 +136,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlDark;
             this.ClientSize = new System.Drawing.Size(644, 418);
-            this.Controls.Add(this.listCompromissos);
+            this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.btnExcluir);
             this.Controls.Add(this.btnEditar);
             this.Controls.Add(this.btnInserir);
@@ -93,6 +144,10 @@
             this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Gestão de Compromissos";
+          //  this.Load += new System.EventHandler(this.ListagemCompromissos_Load);
+            this.tabControl1.ResumeLayout(false);
+            this.tabPage1.ResumeLayout(false);
+            this.tabPage2.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -102,6 +157,10 @@
         private System.Windows.Forms.Button btnInserir;
         private System.Windows.Forms.Button btnEditar;
         private System.Windows.Forms.Button btnExcluir;
-        private System.Windows.Forms.ListBox listCompromissos;
+        private System.Windows.Forms.ListBox listCompromissosDaSemana;
+        private System.Windows.Forms.TabControl tabControl1;
+        private System.Windows.Forms.TabPage tabPage1;
+        private System.Windows.Forms.TabPage tabPage2;
+        private System.Windows.Forms.ListBox listCompromissosFuturos;
     }
 }

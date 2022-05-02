@@ -16,5 +16,8 @@ namespace GestaoCompromissos.Dominio
 
         List<Compromisso> SelecionarCompromissos();
 
+        List<Compromisso> SelecionarCompromissosFuturos();
+
+        List<Compromisso> SelecionarCompromissosDaSemana();
     }
 }

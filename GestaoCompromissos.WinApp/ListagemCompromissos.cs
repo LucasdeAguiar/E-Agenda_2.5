@@ -30,12 +30,57 @@ namespace GestaoCompromissos.WinApp
 
         private void CarregarCompromissos()
         {
+            
+
+            List<Compromisso> compromissosSemana = repositorioCompromisso.SelecionarCompromissosDaSemana();
+
+            listCompromissosDaSemana.Items.Clear();
+            foreach (Compromisso compromisso in compromissosSemana)
+            {
+                listCompromissosDaSemana.Items.Add(compromisso);
+            }
+
+            List<Compromisso> compromissosFuturos = repositorioCompromisso.SelecionarCompromissosFuturos();
+
+            listCompromissosFuturos.Items.Clear();
+            foreach (Compromisso compromisso in compromissosFuturos)
+            {
+                listCompromissosFuturos.Items.Add(compromisso);
+            }
+
+
+
+            /*
             List<Compromisso> compromissos = repositorioCompromisso.SelecionarCompromissos();
 
-            listCompromissos.Items.Clear();
+            listCompromissosDaSemana.Items.Clear();
             foreach (Compromisso compromisso in compromissos)
             {
-                listCompromissos.Items.Add(compromisso);
+                listCompromissosDaSemana.Items.Add(compromisso);
+            }
+            */
+
+        }
+        private void CarregarCompromissosDaSemana()
+        {
+            List<Compromisso> compromissos = repositorioCompromisso.SelecionarCompromissosDaSemana();
+
+            listCompromissosDaSemana.Items.Clear();
+            foreach (Compromisso compromisso in compromissos)
+            {
+                listCompromissosDaSemana.Items.Add(compromisso);
+            }
+
+        }
+
+        private void CarregarCompromissosFuturos()
+        {
+            List<Compromisso> compromissos = repositorioCompromisso.SelecionarCompromissosFuturos();
+
+            listCompromissosDaSemana.Items.Clear();
+            foreach (Compromisso compromisso in compromissos)
+            {
+                listCompromissosFuturos.Items.Add(compromisso);
             }
 
         }
@@ -57,7 +102,7 @@ namespace GestaoCompromissos.WinApp
 
         private void btnEditar_Click(object sender, EventArgs e)
         {
-            Compromisso compromissoSelecionado = (Compromisso)listCompromissos.SelectedItem;
+            Compromisso compromissoSelecionado = (Compromisso)listCompromissosDaSemana.SelectedItem;
 
 
             if (compromissoSelecionado == null)
@@ -82,7 +127,7 @@ namespace GestaoCompromissos.WinApp
 
         private void btnExcluir_Click(object sender, EventArgs e)
         {
-            Compromisso compromissoSelecionado = (Compromisso)listCompromissos.SelectedItem;
+            Compromisso compromissoSelecionado = (Compromisso)listCompromissosDaSemana.SelectedItem;
 
             if (compromissoSelecionado == null)
             {
@@ -100,5 +145,7 @@ namespace GestaoCompromissos.WinApp
                 CarregarCompromissos();
             }
         }
+
+        
     }
 }
