@@ -39,21 +39,25 @@ namespace GestaoContatos.WinApp
 
         private void btnGravar_Click(object sender, EventArgs e)
         {
-            contato.Nome = txtNome.Text;
-            contato.Email = txtEmail.Text;
-            contato.Telefone = txtTelefone.Text;
-            contato.Empresa = txtEmpresa.Text;
-            contato.Cargo = txtCargo.Text;
+            
 
-            if(contato.Telefone.Length != 9)
-            {
-                return;
-            }
 
-            if (!contato.Email.Contains("@") || !contato.Email.Contains("."))
-            {
-                return;
-            }
+                if (!contato.Email.Contains("@") || !contato.Email.Contains("."))
+                {
+                    MessageBox.Show("Digite um email válido..", "Inserção de Email", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    return;
+                }
+                else
+                {
+                    contato.Nome = txtNome.Text;
+                    contato.Email = txtEmail.Text;
+                    contato.Telefone = txtTelefone.Text;
+                    contato.Empresa = txtEmpresa.Text;
+                    contato.Cargo = txtCargo.Text;
+                }
+            
+
+            
         }
     }
 }

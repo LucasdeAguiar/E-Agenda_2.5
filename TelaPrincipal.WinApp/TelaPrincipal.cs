@@ -27,7 +27,7 @@ namespace TelaPrincipal.WinApp
 
             tela.ShowDialog();
 
-           // if(tela.DialogResult == DialogResult.OK)
+         
            
 
             

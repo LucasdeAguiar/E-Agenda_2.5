@@ -38,6 +38,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.label1.Location = new System.Drawing.Point(147, 25);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(188, 32);
@@ -79,12 +80,14 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.ClientSize = new System.Drawing.Size(479, 239);
             this.Controls.Add(this.btnContato);
             this.Controls.Add(this.btnCompromisso);
             this.Controls.Add(this.btnTarefa);
             this.Controls.Add(this.label1);
             this.Name = "TelaPrincipal";
+            this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "TelaPrincipal";
             this.ResumeLayout(false);
