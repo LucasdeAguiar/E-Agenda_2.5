@@ -83,9 +83,7 @@ namespace GestaoCompromissos.Infra.Arquivos
 
             foreach (var item in compromissos)
             {
-                
-
-                if (item.DataCompromisso<dataCompara && item.DataCompromisso > DateTime.Now)
+                if (item.DataCompromisso.Date < dataCompara.Date && item.DataCompromisso.Date > DateTime.Now)
                 {
                     compromissosSemana.Add(item);
                 }
@@ -102,10 +100,7 @@ namespace GestaoCompromissos.Infra.Arquivos
 
             foreach (var item in compromissos)
             {
-               
-
-
-                if (item.DataCompromisso > dataCompara )
+                if (item.DataCompromisso.Date > dataCompara.Date)
                 {
                     compromissosFuturos.Add(item);
                 }

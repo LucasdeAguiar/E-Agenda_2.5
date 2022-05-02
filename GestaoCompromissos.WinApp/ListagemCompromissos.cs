@@ -35,6 +35,7 @@ namespace GestaoCompromissos.WinApp
             List<Compromisso> compromissosSemana = repositorioCompromisso.SelecionarCompromissosDaSemana();
 
             listCompromissosDaSemana.Items.Clear();
+
             foreach (Compromisso compromisso in compromissosSemana)
             {
                 listCompromissosDaSemana.Items.Add(compromisso);
@@ -43,6 +44,7 @@ namespace GestaoCompromissos.WinApp
             List<Compromisso> compromissosFuturos = repositorioCompromisso.SelecionarCompromissosFuturos();
 
             listCompromissosFuturos.Items.Clear();
+
             foreach (Compromisso compromisso in compromissosFuturos)
             {
                 listCompromissosFuturos.Items.Add(compromisso);
@@ -69,6 +71,7 @@ namespace GestaoCompromissos.WinApp
             foreach (Compromisso compromisso in compromissos)
             {
                 listCompromissosDaSemana.Items.Add(compromisso);
+                
             }
 
         }
@@ -77,7 +80,7 @@ namespace GestaoCompromissos.WinApp
         {
             List<Compromisso> compromissos = repositorioCompromisso.SelecionarCompromissosFuturos();
 
-            listCompromissosDaSemana.Items.Clear();
+            listCompromissosFuturos.Items.Clear();
             foreach (Compromisso compromisso in compromissos)
             {
                 listCompromissosFuturos.Items.Add(compromisso);
