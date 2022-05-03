@@ -12,6 +12,8 @@ namespace GestaoCompromissos.Dominio
         void Excluir(Compromisso tarefa);
         void Inserir(Compromisso novaTarefa);
 
+        void LimparCompromissos();
+
         List<Compromisso> SelecionarTodos();
 
         List<Compromisso> SelecionarCompromissos();
@@ -19,5 +21,6 @@ namespace GestaoCompromissos.Dominio
         List<Compromisso> SelecionarCompromissosFuturos();
 
         List<Compromisso> SelecionarCompromissosDaSemana();
+        
     }
 }

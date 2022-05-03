@@ -40,11 +40,20 @@ namespace GestaoContatos.WinApp
         private void btnGravar_Click(object sender, EventArgs e)
         {
             
+            if (txtTelefone.Text.Length != 9)
+            {
 
+                MessageBox.Show("Digite um telefone válido..", "Inserção de Telefone", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                DialogResult = DialogResult.Cancel;
+                return;
+            }
 
-                if (!contato.Email.Contains("@") || !contato.Email.Contains("."))
+            
+
+            if (!txtEmail.Text.Contains("@") || !txtEmail.Text.Contains("."))
                 {
                     MessageBox.Show("Digite um email válido..", "Inserção de Email", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    DialogResult = DialogResult.Cancel;
                     return;
                 }
                 else

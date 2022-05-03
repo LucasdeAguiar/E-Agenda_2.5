@@ -88,6 +88,8 @@ namespace GestaoCompromissos.WinApp
 
         }
 
+        
+
         private void btnInserir_Click(object sender, EventArgs e)
         {
             CadastroCompromissos tela = new CadastroCompromissos();
@@ -149,6 +151,11 @@ namespace GestaoCompromissos.WinApp
             }
         }
 
-        
+        private void btnLimpar_Click(object sender, EventArgs e)
+        {
+            repositorioCompromisso.LimparCompromissos();
+            listCompromissosDaSemana.Items.Clear();
+            listCompromissosFuturos.Items.Clear();
+        }
     }
 }

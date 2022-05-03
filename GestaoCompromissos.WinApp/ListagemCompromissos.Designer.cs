@@ -36,6 +36,7 @@
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.listCompromissosFuturos = new System.Windows.Forms.ListBox();
+            this.btnLimpar = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
@@ -130,12 +131,24 @@
             this.listCompromissosFuturos.Size = new System.Drawing.Size(465, 199);
             this.listCompromissosFuturos.TabIndex = 4;
             // 
+            // btnLimpar
+            // 
+            this.btnLimpar.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btnLimpar.Location = new System.Drawing.Point(516, 56);
+            this.btnLimpar.Name = "btnLimpar";
+            this.btnLimpar.Size = new System.Drawing.Size(103, 42);
+            this.btnLimpar.TabIndex = 5;
+            this.btnLimpar.Text = "Limpar";
+            this.btnLimpar.UseVisualStyleBackColor = false;
+            this.btnLimpar.Click += new System.EventHandler(this.btnLimpar_Click);
+            // 
             // ListagemCompromissos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlDark;
             this.ClientSize = new System.Drawing.Size(644, 418);
+            this.Controls.Add(this.btnLimpar);
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.btnExcluir);
             this.Controls.Add(this.btnEditar);
@@ -144,7 +157,6 @@
             this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Gestão de Compromissos";
-          //  this.Load += new System.EventHandler(this.ListagemCompromissos_Load);
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage2.ResumeLayout(false);
@@ -162,5 +174,6 @@
         private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.TabPage tabPage2;
         private System.Windows.Forms.ListBox listCompromissosFuturos;
+        private System.Windows.Forms.Button btnLimpar;
     }
 }
