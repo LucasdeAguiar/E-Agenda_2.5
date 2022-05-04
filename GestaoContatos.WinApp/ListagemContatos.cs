@@ -32,11 +32,39 @@ namespace GestaoContatos.WinApp
             List<Contato> contatos = repositorioContato.SelecionarContatos();
             
             listContatos.Items.Clear();
+
+            /*
+            var contatosAgrupados = repositorioContato
+                   .SelecionarTodos()
+                   .GroupBy(x => x.Cargo);
+            */
+
+            /*
+            foreach (var contatoAgrupado in contatosAgrupados)
+            {
+                listContatos.Items.Add(contatoAgrupado.Key);
+
+                foreach (Contato contatoDisponivel in contatos)
+                    if (contatoDisponivel.Cargo == contatoAgrupado.Key)
+                        listContatos.Items.Add(contatoDisponivel.ToString());
+            }
+            */
+            
             foreach (Contato contato in contatos)
             {
                 listContatos.Items.Add(contato);
             }
-
+            
+            
+            /*
+            foreach (Contato contatoAgrupado in contatosAgrupados)
+            {
+                listContatos.Items.Add(contatoAgrupado);
+            }
+            */
+            
+           
+            
         }
 
         public Contato obterContato(string nomeContato)

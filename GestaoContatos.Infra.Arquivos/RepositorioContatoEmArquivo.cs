@@ -84,7 +84,20 @@ namespace GestaoContatos.Infra.Arquivos
             return contatos;
         }
 
+        public bool VerificaSeHexisteContato(string nome, string email , string telefone)
+        {
 
+            foreach (var item in contatos)
+            {
+                if (item.Nome == nome && item.Email == email && item.Telefone == telefone)
+                {
+                    return true;
+                    break;
+                }
+            }
+
+            return false;
+        }
 
     }
 }
