@@ -14,7 +14,7 @@ namespace GestaoContatos.Dominio
         void Excluir(Contato tarefa);
         void Inserir(Contato novaTarefa);
 
-        bool VerificaSeHexisteContato(string nome, string email, string telefone);
+         bool VerificaSeHexisteContato(string nome, string email, string telefone);
 
         List<Contato> SelecionarTodos();
 

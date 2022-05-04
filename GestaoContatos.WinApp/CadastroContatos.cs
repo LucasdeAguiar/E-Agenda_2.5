@@ -48,7 +48,12 @@ namespace GestaoContatos.WinApp
                 return;
             }
 
-          if(txtNome.Text.Length == 0)
+
+            
+
+
+
+            if (txtNome.Text.Length == 0)
             {
                 MessageBox.Show("Digite um nome..", "Inserção de Nome", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 DialogResult = DialogResult.Cancel;

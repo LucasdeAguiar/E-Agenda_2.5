@@ -143,6 +143,23 @@ namespace GestaoContatos.WinApp
                 CarregarContatos();
             }
         }
+
+        public bool verificarExistenciaContato(string nome, string email, string telefone)
+        {
+          bool jaExisteContato = repositorioContato.VerificaSeHexisteContato(nome, email , telefone);
+
+            if(jaExisteContato == true)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+
+          
+        }
+
     }
     
 }
