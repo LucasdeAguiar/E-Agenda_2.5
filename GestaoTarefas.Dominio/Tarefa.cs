@@ -14,15 +14,17 @@ namespace GestaoTarefas.Dominio
             DataCriacao = DateTime.Now;
         }
 
-        public Tarefa(int n, string t) : this()
+        public Tarefa(int n, string t, string p) : this()
         {
             Numero = n;
             Titulo = t;
+            Prioridade = p;
             DataConclusao = null;
         }
 
         public int Numero { get; set; }
         public string Titulo { get; set; }
+        public string Prioridade { get; set; }
         public DateTime DataCriacao { get; set; }
         public DateTime? DataConclusao { get; set; }
         public List<ItemTarefa> Itens { get { return itens; } }
@@ -37,7 +39,7 @@ namespace GestaoTarefas.Dominio
                     $"Concluída: {DataConclusao.Value.ToShortDateString()}";
             }
 
-            return $"Número: {Numero}, Título: {Titulo}, Percentual: {percentual}";
+            return $"Número: {Numero}, Título: {Titulo}, Prioridade: {Prioridade}, Percentual: {percentual}";
         }
 
         public void AdicionarItem(ItemTarefa item)

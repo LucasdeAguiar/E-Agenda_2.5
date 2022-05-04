@@ -34,6 +34,8 @@
             this.txtTitulo = new System.Windows.Forms.TextBox();
             this.btnGravar = new System.Windows.Forms.Button();
             this.btnCancelar = new System.Windows.Forms.Button();
+            this.label3 = new System.Windows.Forms.Label();
+            this.txtPrioridade = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // label1
@@ -57,16 +59,16 @@
             // txtNumero
             // 
             this.txtNumero.Enabled = false;
-            this.txtNumero.Location = new System.Drawing.Point(72, 17);
+            this.txtNumero.Location = new System.Drawing.Point(72, 18);
             this.txtNumero.Name = "txtNumero";
-            this.txtNumero.Size = new System.Drawing.Size(61, 23);
+            this.txtNumero.Size = new System.Drawing.Size(213, 23);
             this.txtNumero.TabIndex = 2;
             // 
             // txtTitulo
             // 
             this.txtTitulo.Location = new System.Drawing.Point(72, 53);
             this.txtTitulo.Name = "txtTitulo";
-            this.txtTitulo.Size = new System.Drawing.Size(352, 23);
+            this.txtTitulo.Size = new System.Drawing.Size(213, 23);
             this.txtTitulo.TabIndex = 3;
             // 
             // btnGravar
@@ -90,11 +92,29 @@
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = true;
             // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(5, 93);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(61, 15);
+            this.label3.TabIndex = 6;
+            this.label3.Text = "Prioridade";
+            // 
+            // txtPrioridade
+            // 
+            this.txtPrioridade.Location = new System.Drawing.Point(72, 85);
+            this.txtPrioridade.Name = "txtPrioridade";
+            this.txtPrioridade.Size = new System.Drawing.Size(213, 23);
+            this.txtPrioridade.TabIndex = 7;
+            // 
             // CadastroTarefas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(436, 211);
+            this.Controls.Add(this.txtPrioridade);
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnGravar);
             this.Controls.Add(this.txtTitulo);
@@ -122,5 +142,7 @@
         private System.Windows.Forms.TextBox txtTitulo;
         private System.Windows.Forms.Button btnGravar;
         private System.Windows.Forms.Button btnCancelar;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.TextBox txtPrioridade;
     }
 }
